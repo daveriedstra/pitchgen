@@ -1,0 +1,37 @@
+#N canvas 0 450 720 878 10;
+#N canvas 0 0 720 405 youarehearing 1;
+#X obj 147 251 notoname2;
+#X obj 230 92 mtof;
+#X obj 230 194 dac~;
+#X obj 335 114 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X obj 335 156 line~;
+#X obj 230 172 *~;
+#X obj 230 150 osc~ 440;
+#X obj 335 134 pack 0 50;
+#X obj 230 118 line~ 440 50;
+#X obj 230 31 r notename;
+#X obj 147 222 r notename;
+#X obj 147 278 outlet;
+#X obj 335 92 r onoff;
+#X obj 230 64 int;
+#X connect 0 0 11 0;
+#X connect 1 0 8 0;
+#X connect 3 0 7 0;
+#X connect 4 0 5 1;
+#X connect 5 0 2 0;
+#X connect 5 0 2 1;
+#X connect 6 0 5 0;
+#X connect 7 0 4 0;
+#X connect 8 0 6 0;
+#X connect 9 0 13 0;
+#X connect 10 0 0 0;
+#X connect 12 0 3 0;
+#X connect 13 0 1 0;
+#X restore 422 143 pd youarehearing;
+#X symbolatom 422 171 10 0 0 0 - - -, f 10;
+#X obj 92 44 tgl 50 0 onoff empty SWITCH 7 7 0 10 -262144 -1 -1 1 1
+;
+#X obj 195 54 hsl 300 30 10 127 0 0 notename empty NOTE\ NAME 3 -8
+0 10 -262144 -1 -1 12198 1;
+#X connect 0 0 1 0;
