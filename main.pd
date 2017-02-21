@@ -44,7 +44,7 @@
 #X obj 92 44 tgl 50 0 onoff onoff SWITCH 7 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 195 54 hsl 300 30 10 127 0 0 notename notename NOTE\ NAME 3
--8 0 10 -262144 -1 -1 8868 1;
+-8 0 10 -262144 -1 -1 11935 1;
 #N canvas 1080 0 360 428 osc-in 0;
 #X obj 142 99 oscparse;
 #X obj 177 173 outlet;
@@ -109,6 +109,13 @@
 #X connect 6 0 4 0;
 #X connect 7 0 8 0;
 #X restore 280 187 pd osc-out;
+#X obj 447 114 vsl 50 128 0 1 0 0 vol vol VOLUME 0 -9 0 10 -262144
+-1 -1 5102 1;
+#X msg 94 176 \; c1 label \$1;
+#X obj 54 176 cnv 15 175 60 empty c1 G\$3 20 40 0 100 -262144 -66577
+0;
 #X connect 0 0 1 0;
+#X connect 1 0 8 0;
 #X connect 4 0 5 0;
 #X connect 5 0 6 0;
+#X coords 0 0 1 1 85 60 0;
